@@ -3,9 +3,9 @@ import * as React from 'react';
 import dynamic from 'next/dynamic';
 
 //Import Components
-import Slider from './components/Slider';
-import NormalMasonary from './components/NormalMasonary';
-import VirtualizedMasonary from './components/VirtualizedMasonary';
+import Slider from '../components/Slider';
+import NormalMasonary from '../components/NormalMasonary';
+import VirtualizedMasonary from '../components/VirtualizedMasonary';
 
 //Import Types
 import { GetStaticPropsContext, InferGetStaticPropsType } from 'next';
@@ -15,7 +15,7 @@ import { getPhotos } from './api/photos';
 
 type TAppProps = {} & InferGetStaticPropsType<typeof getStaticProps>;
 
-const Modal = dynamic(() => import('./components/Modal'), { ssr: false });
+const Modal = dynamic(() => import('../components/Modal'), { ssr: false });
 
 const App = (props: TAppProps) => {
 	//All fetched photos. Default state will be the the first page links.
